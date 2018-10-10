@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="feedexp.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="feedexp.Perspective"
+            name="RCP Perspective"
+            id="FeedExp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="feedexp.views.ChannelsTreeView"
+            id="feedexp.views.ChannelsTreeView"
+            name="Channels TreeView"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
